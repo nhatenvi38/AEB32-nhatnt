@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Block-ui-2</title>
+  </head>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: auto;
+      padding: 0;
+      background-color: whitesmoke;
+    }
+    .parrent {
+      margin: 50px;
+      border: gray;
+      width: 1200px;
+    }
+    img {
+      width: 1200px;
+    }
+    .border{
+     
+      border-left: solid;
+      border-right: solid;
+      border-bottom: solid;
+      color: silver;
+    }
+    .follow {
+      height: 60px;
+      display: flex;
+      background-color: white;
+      
+    }
+    .content1 {
+      display: flex;
+      flex: 0.8;
+      justify-content: center;
+      align-items: center;
+      
+    }
+    .percent1 {
+      display: flex;
+      flex: 0.2;
+      justify-content: center;
+      align-items: center;
+      color: white;
+    }
+  </style>
+  <body>
+    <div class="parrent">
+      <div><img src="./profile.png" alt="" /></div>
+      <div class="border">
+        <div class="follow">
+          <div class="content1">
+            <p style="margin-right: 800px">FOLLOWERS</p>
+          </div>
+          <div class="percent1">
+            <p
+              style="padding: 10px; background-color: red; border-radius: 10px"
+            >
+              1,200
+            </p>
+          </div>
+        </div>
+        <div class="follow"  style="border-top: solid;">
+          <div class="content1">
+            <p style="margin-right: 800px">FOLLOWINGS</p>
+          </div>
+          <div class="percent1">
+            <p
+              style="padding: 10px; background-color: rgb(8, 171, 247); border-radius: 10px"
+            >
+              1,200
+            </p>
+          </div>
+        </div>
+        <div class="follow"  style="border-top: solid;">
+          <div class="content1">
+            <p style="margin-right: 800px">MESSAGES</p>
+          </div>
+          <div class="percent1">
+            <p
+              style="padding: 10px; background-color: rgb(10, 247, 117); border-radius: 10px"
+            >
+              1,200
+            </p>
+          </div>
+        </div>
+        <div class="follow"  style="border-top: solid; color: silver;">
+          <div class="content1">
+            <p style="margin-right: 800px">LIKES</p>
+          </div>
+          <div class="percent1">
+            <p
+              style="padding: 10px; background-color: rgb(251, 235, 10); border-radius: 10px"
+            >
+              1,200
+            </p>
+          </div>
+        </div>
+        <div class="follow"  style="border-top: solid; color: silver;">
+          <div class="content1">
+            <p style="margin-right: 800px">COMMENTS</p>
+          </div>
+          <div class="percent1">
+            <p
+              style="padding: 10px; background-color: rgb(202, 123, 221); border-radius: 10px"
+            >
+              1,200
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
