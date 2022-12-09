@@ -1,0 +1,33 @@
+
+.body {
+    margin: 10px;
+  }
+
+  .header {
+    text-align: justify;
+    border: 1px solid rgb(209, 201, 201);
+    background-color: aliceblue;
+    margin: 10px 0;
+  }
+
+  .footer {
+    border: 1px solid rgb(205, 202, 202);
+    background-color: #efe9e9;
+  }
+.w__100 {
+  width: 100%;
+}
+.w__50 {
+  width: 50%;
+}
+.bg__color {
+  background-color: beige;
+}
+
+.col__content {
+  height: 800px;
+}
+
+.col__content__height {
+  height: 400px;
+}

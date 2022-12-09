@@ -1,0 +1,30 @@
+.row {
+    margin: 0px;
+    padding: 24px;
+  }
+  .col {
+    display: flex;
+    flex-direction: column;
+  }
+  .container {
+    flex: 0.2;
+    margin: 0;
+  }
+  .tp {
+    flex: 0.5;
+  }
+  .btm {
+    display: flex;
+    flex: 0.5;
+    padding: 10px;
+  }
+  .per {
+    height: 80px;
+    width: 25px;
+    border: 1px solid rgb(196, 192, 192);
+    margin: 10px auto;
+  }
+  .txt {
+    font-size: 15px;
+    text-align: center;
+  }
