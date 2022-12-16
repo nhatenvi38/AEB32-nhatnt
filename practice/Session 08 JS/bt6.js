@@ -7,3 +7,5 @@ for (let x = 0; x <= m && x <= n; x++) {
   }
 }
 console.log(p);
+
+// if (max%min === 0)
