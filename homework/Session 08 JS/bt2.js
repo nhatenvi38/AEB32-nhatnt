@@ -1,5 +1,5 @@
-let inputSizeMatrixAndRef = prompt("nhap kich co ma tran mxn va so k:");
-let M = inputSizeMatrixAndRef.split(" ");
+let matrixSize = prompt("nhap size ma tran mxn va so k:");
+let M = matrixSize.split(" ");
 let m = parseInt(M[0]);
 let n = parseInt(M[1]);
 let k = parseInt(M[2]);
