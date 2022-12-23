@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="./CSS/common.css" />
     <link rel="stylesheet" href="./CSS/list.CSS">
   </head>
-  <body>
+  <body id="tbody__users">
     <header class="bg__color p-3">
       <nav class="navbar navbar-expand-lg bg-light">
         <div class="container-fluid">
@@ -36,7 +36,7 @@
                 >
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="./list_bootstrap.html">List</a>
+                <a class="nav-link active" href="./list.html">List</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="./form.html">Form</a>
@@ -58,33 +58,19 @@
         <table class="table table-dark table-striped table-hover">
           <thead>
             <tr>
-              <th scope="col">#</th>
-              <th scope="col">First</th>
-              <th scope="col">Last</th>
-              <th scope="col">Handle</th>
+              <th scope="col">ID</th>
+              <td scope="col">Name</td>
+              <td scope="col">City</td>
+              <td scope="col">Avatar</td>
             </tr>
           </thead>
-          <tbody>
-            <tr>
-              <th scope="row">1</th>
-              <td>Mark</td>
-              <td>Otto</td>
-              <td>@mdo</td>
-            </tr>
-            <tr>
-              <th scope="row">2</th>
-              <td>Jacob</td>
-              <td>Thornton</td>
-              <td>@fat</td>
-            </tr>
-            <tr>
-              <th scope="row">3</th>
-              <td colspan="2">Larry the Bird</td>
-              <td>@twitter</td>
-            </tr>
+          <tbody id="tbody__user">
+         
           </tbody>
         </table>
       </div>
+   
+      <div class="d-flex justify-content-around flex-wrap" id="div__content"></div>
       <div class="col-12 col-sm-3 col__content bg-info col__content__height">
         <div class="p-3">
           <h2>What?</h2>
