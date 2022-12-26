@@ -5,6 +5,7 @@ fetch(URL, {
 })
   .then((response) => response.json())
   .then((data) => {
+    console.log(data);
     _renderUI(data);
   })
   .catch((error) => {
@@ -15,11 +16,15 @@ function _renderUI(user) {
   let elmBody = document.getElementById("tbody__user");
 
   function fomatRow(user) {
-    return `<tr onclick="handleClickRow(${user.id})">
-    <dt>${user.id}</dt>
+    return `<tr (${user.id})">
+    <td>${user.id}</td>
     <td>${user.name}</td>
     <td>${user.city}</td>
     <td>${user.avatar}</td>
+    <td>
+    <button class="btn btn-success" onclick="gotoDetail(${user.id})">Detail</button>
+    <button class="btn btn-danger" onclick="deleteUser(${user.id})">Delete</button>
+    </td>
   </tr>`;
   }
   let resRow = "";
@@ -31,4 +36,24 @@ function _renderUI(user) {
 function handleClickRow(userId) {
   console.log(userId);
   window.location.href="./detail.html?id="+userId
+}
+function gotoDetail(userId) {
+  console.log("gotoDetail", userId);
+  window.location.href=`./detail.html?id=+${userId}`;
+}
+function deleteUser(userId) {
+  console.log("deleteUser", userId);
+  let user_delete = URL + '/' +userId;
+  fetch("https://63a06c2fe3113e5a5c3d35fd.mockapi.io/Users/" + userId, {
+    method: "DELETE",
+  })  
+  .then((response) => response.json())
+  .then((data) => {
+    console.log(data);
+    resetTbody()
+    getListUsers();
+  })
+  .catch((error) => {
+    console.error("Error:", error);
+  });
 }
