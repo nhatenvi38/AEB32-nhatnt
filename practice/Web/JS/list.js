@@ -22,7 +22,8 @@ function _renderUI(user) {
     <td>${user.city}</td>
     <td>${user.avatar}</td>
     <td>
-    <button class="btn btn-success" onclick="gotoDetail(${user.id})">Detail</button>
+    <button class="btn btn-success" onclick="goToDetail(${user.id})">Detail</button>
+    <button class="btn btn-info" onclick="handleEdit(${user.id})">Edit</button>
     <button class="btn btn-danger" onclick="deleteUser(${user.id})">Delete</button>
     </td>
   </tr>`;
@@ -33,27 +34,42 @@ function _renderUI(user) {
   }
   elmBody.innerHTML = resRow;
 }
-function handleClickRow(userId) {
-  console.log(userId);
-  window.location.href="./detail.html?id="+userId
-}
-function gotoDetail(userId) {
-  console.log("gotoDetail", userId);
-  window.location.href=`./detail.html?id=+${userId}`;
-}
-function deleteUser(userId) {
-  console.log("deleteUser", userId);
-  let user_delete = URL + '/' +userId;
-  fetch("https://63a06c2fe3113e5a5c3d35fd.mockapi.io/Users/" + userId, {
-    method: "DELETE",
-  })  
-  .then((response) => response.json())
-  .then((data) => {
-    console.log(data);
-    resetTbody()
-    getListUsers();
+function getListUser() {
+  fetch(URL, {
+    method: "GET",
   })
-  .catch((error) => {
-    console.error("Error:", error);
-  });
+    .then((response) => response.json())
+    .then((data) => {
+      // console.log(data);
+      // dam bao users no co data
+      _renderUI(data);
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
+}
+
+function goToDetail(userId) {
+  console.log("goToDetail", userId);
+  window.location.href = `./detail.html?id=${userId}`;
+}
+
+function deleteUser(userId) {
+  console.log("deleteUser");
+  let user_delete = URL + "/" + userId;
+  fetch(user_delete, {
+    method: "DELETE",
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      getListUser();
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
+}
+
+function handleEdit(userId) {
+  console.log("handleEdit", userId);
+  window.location.href = `./form.html?id=${userId}`;
 }
