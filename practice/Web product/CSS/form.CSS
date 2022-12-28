@@ -1,0 +1,12 @@
+
+body {
+    margin: 10px;
+    background-image: url(https://wallpaperaccess.com/full/126820.jpg);
+  
+  }
+  .block__center {
+    align-self: center;
+    align-items: center;
+    align-content: center;
+    max-width: 600px;
+}
