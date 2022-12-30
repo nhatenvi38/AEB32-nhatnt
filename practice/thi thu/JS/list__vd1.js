@@ -75,49 +75,48 @@ function vd1(params) {
 function vd2() {
   const LIST_USER_CARD = [
     {
-      name: "One piece",
-      thumb:
-        "https://st.ntcdntempv3.com/data/comics/209/dao-hai-tac.jpg",
-      author: "Eichiiro Oda",
+      name: "Den",
+      avatar:
+        "https://cdn.alongwalker.co/info/wp-content/uploads/2022/03/15205113/image-12-rapper-noi-tieng-nhat-viet-nam-164732707321752.jpg",
+      city: "Ha Long",
       id: "1",
     },
     {
-      name: "Naruto",
-      thumb:
-        "https://st.ntcdntempv3.com/data/comics/175/naruto-new-generation.jpg",
-      author: "Masashi Kishimoto",
+      name: "bray",
+      avatar:
+        "https://cdn.alongwalker.co/info/wp-content/uploads/2022/03/15205112/image-12-rapper-noi-tieng-nhat-viet-nam-164732707117240.jpg",
+      city: "Hochiminh",
       id: "2",
     },
     {
-      name: "Demon slayer",
-      thumb:
-        "https://st.ntcdntempv3.com/data/comics/235/thanh-guom-diet-quy.jpg",
-      author: "Gotouge Koyoharu",
+      name: "Justa Tee",
+      avatar:
+        "https://photo-resize-zmp3.zmdcdn.me/w360_r1x1_jpeg/avatars/f/5/3/b/f53b7859f2f0aaf5c1363eb80e75c29b.jpg",
+      city: "Hanoi",
       id: "3",
     },
     {
-      name: "Conan",
-      thumb:
-        "https://st.ntcdntempv3.com/data/comics/30/tham-tu-conan.jpg",
-      author: "Gosho Aoyama",
+      name: "DSK",
+      avatar:
+        "https://i1.sndcdn.com/artworks-L9e8FtQmhTPY64Ek-L5f66A-t500x500.jpg",
+      city: "Da Lat",
       id: "4",
     },
     {
-      name: "One punch man",
-      thumb:
-        "https://st.ntcdntempv3.com/data/comics/37/anh-hung-onepunch.jpg",
-      author: "One",
+      name: "Binz",
+      avatar:
+        "https://static2.yan.vn/YanNews/2167221/202012/xon-xao-gia-catxe-cua-binz-khoang-500-trieu1-dem-dien-f8272f70.jpg",
+      city: "Da Nang",
       id: "5",
     },
     {
-        name: "Chain saw man",
-        thumb:
-          "https://st.ntcdntempv3.com/data/comics/41/chainsaw-man-tho-san-quy.jpg",
-        author: "Fujimoto Tatsuki",
+        name: "Suboi",
+        avatar:
+          "https://static.tuoitre.vn/tto/i/s626/2016/05/25/suboi-obama-1464164959.jpg",
+        city: "Hochiminh",
         id: "6",
       },
   ];
-
 
   let elm = document.getElementById("div__content");
 
@@ -125,7 +124,7 @@ function vd2() {
     return `
     <div class="card col-4">
         <img
-            src="${user.thumb}"
+            src="${user.avatar}"
             ,
             class="card-img-top"
             alt="..."
@@ -133,9 +132,10 @@ function vd2() {
         <div class="card-body">
             <h5 class="card-title">${user.name}</h5>
             <p class="card-text">
-            Click vào nút để đọc ngay.
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
             </p>
-            <a href="#" class="btn btn-primary">Đọc truyện</a>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
     </div>
     `;

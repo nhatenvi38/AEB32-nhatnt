@@ -1,0 +1,23 @@
+
+table,th,td{
+    border:1px solid;
+    border-collapse: collapse;
+    text-align: center;
+    padding: 5px 10px;
+}
+.bg__color{
+    background-color: beige;
+  }
+  .header{
+    background-color: beige;
+    padding: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.footer {
+    background-color: beige   ;
+    text-align: center;
+    border: 1px solid gray;
+    padding: 1%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
