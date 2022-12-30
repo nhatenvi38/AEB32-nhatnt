@@ -20,36 +20,44 @@
 <div class="w-50 m-auto">
        <form onsubmit="return false">
         <div class="mb-3">
-          <label for="inputUsername" class="form-label"
-            >Username</label
+          <label for="inputName" class="form-label"
+            >Name</label
           >
           <input
 
             class="form-control"
-            id="inputUsername"
+            id="inputName"
             aria-describedby="emailHelp"
           />
-          <div id="emailHelp class="form-text">
-            Nhập username bạn đã đăng ký
-          </div>
         </div>
         <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label"
-            >Password</label
+          <label for="inputAuthor" class="form-label"
+            >Author</label
           >
           <input
-            type="password"
+            type="text"
             class="form-control"
-            id="inputPassword"
+            id="inputAuthor"
+          />
+        </div>
+        <div class="mb-3">
+          <label for="inputThumb" class="form-label"
+            >Thumb</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="inputThumb"
           />
         </div>
    
-        <button onclick="handleLogin()" type="submit" class="btn btn-primary">Đăng nhập</button>
+        <button onclick="handleEdit()" type="submit" class="btn btn-primary">Cập nhật</button>
        </form>
 
-    
+  
+
+          
     <script src="../../bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
     <script src="../../bootstrap-5.2.3-dist/umd/popper.min.js"></script>
-    <script src="./JS/form.js"></script>
+    <script src="./JS/edit.js"></script>
 </body>
-</html>

@@ -1,77 +1,6 @@
-// get elm body table
+
 let elmBodyTable = document.getElementById('tbody_user');
 let tempRowTable = '';
-
-// dummy data row `<tr><td>1</td><td>2</td></tr>`
-// for (let index = 0; index < 4; index++) {
-//     tempRowTable += `<tr>
-//     <th scope="row">1</th>
-//     <td>Mark</td>
-//     <td>Otto</td>
-//     <td>@mdo</td>
-//   </tr>`
-// }
-
-// elm.innerHTML -> render row table -> table co 1 row data
-// for -> render 5 row 
-
-// dummy listUser -> for listUser -> render data row listUser
-// tạo 1 biến user
-function vd1(params) {
-    let user = {
-        id: 1,
-        name: "name 1",
-        age: 30,
-        address: "address 1",
-      };
-      let listUser = [
-        {
-          id: 1,
-          name: "name 1",
-          age: 30,
-          address: "address 1",
-        },
-        {
-          id: 2,
-          name: "name 2",
-          age: 30,
-          address: "address 2",
-        },
-        {
-          id: 3,
-          name: "name 3",
-          age: 30,
-          address: "address 3",
-        },
-        {
-          id: 4,
-          name: "name 4",
-          age: 34,
-          address: "address 4",
-        },
-      ];
-      
-      let elmBodyTable = document.getElementById("tbody__user");
-      let tempRowTable = "";
-      
-      function formatRowUser(user) {
-        let _stringTr = `<tr>
-                              <th scope="row">${user.id}</th>
-                              <td>${user.name}</td>
-                              <td>${user.age}</td>
-                              <td>${user.address}</td>
-                          </tr>`;
-        return _stringTr;
-      }
-      
-      listUser.map((user) => {
-        tempRowTable += formatRowUser(user);
-      });
-      
-      elmBodyTable.innerHTML = tempRowTable;
-      console.log(elmBodyTable);
-}
-
 function vd2() {
   const LIST_USER_CARD = [
     {
@@ -118,24 +47,27 @@ function vd2() {
       },
   ];
 
-
+  let user = [];
+  const URL = "https://63a06c2fe3113e5a5c3d35fd.mockapi.io/manga/";
   let elm = document.getElementById("div__content");
 
   function formatUICard(user) {
     return `
-    <div class="card col-4">
+    <div class="card col-4 card__content">
         <img
             src="${user.thumb}"
             ,
             class="card-img-top"
             alt="..."
         />
-        <div class="card-body">
-            <h5 class="card-title">${user.name}</h5>
-            <p class="card-text">
-            Click vào nút để đọc ngay.
-            </p>
-            <a href="#" class="btn btn-primary">Đọc truyện</a>
+        <div class="card-body m-auto justify-content-center justify-content-lg-center flex-wrap">
+            <h5 class="m-auto card-title">${user.name}</h5>
+            <div>
+            <a href="#" onclick = gotoDetail(${user.id}) class="btn btn-primary">Đọc truyện</a> 
+            <a href="#" onclick = edit(${user.id}) class="btn btn-success">edit</a>
+            <a href="#" onclick = deleteUser(${user.id}) class="btn btn-warning">delete</a>
+            </div>
+     
         </div>
     </div>
     `;
@@ -148,9 +80,32 @@ function vd2() {
   elm.innerHTML = resUI;
 }
 
+
+function gotoDetail(user) {
+  window.location.href = `./detail.html?id=${user}`;
+}
+
 vd2();
 
 // listUser.map((user) => {
 //     tempRowTable += formatRowUser(user)
 // })
 
+function edit(user) {
+  window.location.href = `./edit.html?id=${user}`;
+}
+
+function deleteUser(user) {
+  console.log("deleteUser");
+  let user_delete = URL + "/" + user;
+  fetch(user_delete, {
+    method: "DELETE",
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      getListUser();
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
+}

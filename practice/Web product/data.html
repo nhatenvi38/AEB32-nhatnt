@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+        const url = "https://63a06c2fe3113e5a5c3d35fd.mockapi.io/manga"
+            const LIST_USER_CARD = [
+              {
+                name: "One piece",
+                thumb: "https://st.ntcdntempv3.com/data/comics/209/dao-hai-tac.jpg",
+                author: "Eichiiro Oda",
+                id: "1",
+              },
+              {
+                name: "Naruto",
+                thumb:
+                  "https://st.ntcdntempv3.com/data/comics/175/naruto-new-generation.jpg",
+                author: "Masashi Kishimoto",
+                id: "2",
+              },
+              {
+                name: "Demon slayer",
+                thumb:
+                  "https://st.ntcdntempv3.com/data/comics/235/thanh-guom-diet-quy.jpg",
+                author: "Gotouge Koyoharu",
+                id: "3",
+              },
+              {
+                name: "Conan",
+                thumb: "https://st.ntcdntempv3.com/data/comics/30/tham-tu-conan.jpg",
+                author: "Gosho Aoyama",
+                id: "4",
+              },
+              {
+                name: "One punch man",
+                thumb:
+                  "https://st.ntcdntempv3.com/data/comics/37/anh-hung-onepunch.jpg",
+                author: "One",
+                id: "5",
+              },
+              {
+                name: "Chain saw man",
+                thumb:
+                  "https://st.ntcdntempv3.com/data/comics/41/chainsaw-man-tho-san-quy.jpg",
+                author: "Fujimoto Tatsuki",
+                id: "6",
+              },
+            ];
+            for (let index = 0; index <  LIST_USER_CARD.length; index++) {
+              postUser(LIST_USER_CARD[index]);
+
+            }
+            function postUser(user) {
+        console.log('postUser');
+        fetch(url, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(user),
+        })
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data);
+          })
+          .catch((error) => {
+            console.error("Error:", error);
+          });
+      }
+    </script>
+  </body>
+</html>

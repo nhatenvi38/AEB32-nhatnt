@@ -1,16 +1,11 @@
+const signUpButton = document.getElementById('signUp');
+const signInButton = document.getElementById('signIn');
+const container = document.getElementById('container');
 
+signUpButton.addEventListener('click', () => {
+  container.classList.add("right-panel-active");
+});
 
-
-
-function handleSubmit() {
-    let userName = document.getElementById("inputUsername")?.value;
-    let password = document.getElementById("inputPassword")>?.value;
-}
-
-
-
-if (userName .getElementById=== 'aptech'&& password === 'aptech') {
-    alert ('dung')
-} else {
-    alert ('sai password')
-}
+signInButton.addEventListener('click', () => {
+  container.classList.remove("right-panel-active");
+});
