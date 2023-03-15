@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <title>login</title>
+    <link rel="stylesheet" href="CSS/login.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="div__content">
+        <h1>Login</h1>
+        <div class="input">
+           <i class="fas fa-user"></i>
+           <input type="text" placeholder="User Name" id="input__email"/>
+        </div>
+        <br>
+        <div class="input">
+          <i class="fas fa-key"></i>
+          <input type="text" placeholder="Password" id="input__password" />
+        </div>
+        <div>
+          <input type="submit" value="Login" class="btn__Login" onclick="handleLogin()">
+          <input type="submit" value="Register" class="btn__Register" >
+        </div>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script src="js/login.js"></script>
+  </body>
+</html>

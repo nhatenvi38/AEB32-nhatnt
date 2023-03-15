@@ -1,0 +1,411 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2? family = Lobster & display = swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto:wght@300&family=Sigmar+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fuzzy+Bubbles&family=Lobster&family=Roboto:wght@300&family=Sigmar+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shalimar&display=swap');
+:root {
+    --main-text-font:'Roboto','sans-serif';
+    --logo-text-font: 'Anton', 'sans-serif';
+    --font-family: 'Sigmar One', 'cursive';
+    --font: 'Fuzzy Bubbles', 'cursive';
+    --font-family: 'Shalimar', 'cursive';
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+}
+li {
+    list-style: none;
+}
+.container {
+    max-width: 1024px;
+    margin: auto;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+header {
+    background-image: url(../img/p1.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 99vw;
+    height: 100vh;
+    position: relative;
+}
+.bg-image {
+    position: absolute;
+    content:"";
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.2;
+}
+.top {
+    position: absolute;
+    width: 100%;
+    z-index: 1;
+}
+.header-top {
+    justify-content: space-between;
+    padding: 12px 0;
+    align-items: center;
+}
+.header-top p {
+    font-family:var(--logo-text-font);
+    font-size: 25px;
+    letter-spacing: 2px;
+    color: rgb(255, 141, 35) ;
+    font-weight: bold;
+}
+.header-top ul {
+    display:flex;
+}
+.header-top ul>i {
+    font-size: 32px;
+    color: white;
+    margin: 12px 0 0 12px;
+    cursor: pointer;
+}
+.header-top ul li{
+    margin-left: 12px;
+    position:relative;
+    color: rgb(255, 141, 35) ;
+}
+.header-top ul li::after {
+    position:absolute;
+    content:"";
+    display:block;
+    bottom: -2px;
+    height: 4px;
+    width: 0%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color:rgb(255, 141, 35) ;
+    border-radius: 5px;
+    transition:all 0.5s ease;
+}
+.header-top ul li:hover::after {
+    width: 100%;
+}
+.header-top ul li a {
+    font-family: var(--main-text-font);
+    color: white;
+    font-weight: bold;
+}
+.header-top ul i {
+    font-size: 32px;
+    color: white;
+    margin: 12px 0 0 12px;  
+    cursor: pointer;
+    margin-bottom: 150px;
+    display:none;
+}
+.header-top>i{
+    font-size: 32px;
+    color:rgb(255, 141, 35) ;
+    cursor: pointer;
+    display: none;
+}
+.header-top span {
+    position: relative;
+}
+.header-top span input {
+    height: 23px;
+    width: 100%;
+    border-radius: 3px;
+    border: none;
+    padding-left: 15px;
+    outline: none;
+}
+.header-top span>i {
+    position: absolute;
+    font-size: 15px;
+    right: 12px;
+    line-height: 23px;
+    cursor: pointer;
+}
+.header-text {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    max-width: 700px;
+    min-width: 370px;
+    text-align:center;
+    font-size: 120%;
+    color:white;
+}
+.header-text H1 {
+    font-family: var(--main-text-font);
+    font-weight: bold;
+    margin-bottom: 20px;
+    font-size:  32px;
+}
+.header-text p {
+    font-family: var(--font);
+    color: rgb(252, 207, 148);
+}
+.header-text span {
+    font-family:Georgia, 'Times New Roman', Times, serif ;
+    color: rgb(255, 141, 35) ;
+}
+.header-text button {
+    width:150px;
+    height:40px;
+    margin-top: 20px;
+    background-color: transparent;
+    color:white;
+    border: 3px solid  rgb(255, 141, 35);
+    cursor: pointer;
+    font-size:17px ;
+}
+.header-text button:hover {
+    background-color:  rgb(255, 141, 35);
+    transition: all 0.3s ease;
+}
+@media (max-width: 575px) {
+    .header-top ul {
+        position:fixed;
+        width: 200px;
+        height:100vh;
+        background-color: rgb(255, 141, 35);
+        right: 0;
+        top: 0;
+        flex-direction: column;
+        transform: translateX(100%);
+        opacity: 0;
+        transition:all 0.4s ease;
+    }
+    .header-top ul li {
+        margin-bottom: 20px;
+        margin-left: 50px;
+    }
+    .header-top>i {
+        display: block;
+    }
+    .header-top ul>i {
+        display: block;
+    }
+    .header-top {
+        padding: 0 12px;
+    }
+}
+body { 
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    color: #111;
+    line-height: 1,15;
+}
+
+h3 {
+    font-size: 18px;
+    color:#4f4f4f;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    border: 1px solid #bebebe;
+    display:inline-block;
+}
+.headline {
+    text-align: center;
+    margin: 40px 0px;
+
+}
+ul.products {
+    list-style: none;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+ul.products li {
+    text-align: center;
+    margin: 10px;
+    border: solid rgb(231, 230, 230) 0px;
+    width: 300px;
+    transition: all 0.1s;
+} 
+ul.products li:hover{
+    border: solid rgb(231, 230, 230) 2px;
+    
+}    
+ul.products li img {
+    max-width: 100%;
+    height:auto;
+}
+ul.products li .product-info {
+    padding: 20px 0px;
+}
+ul.products li .product-info a {
+    display:block;
+    text-decoration: none;
+}
+ul.products li .product-info a.product-cat {
+    font-size: 11px;
+    text-transform: uppercase;
+    color:#969595;
+    padding: 3px 0px;
+    font-weight: 800;
+}
+ul.products li .product-info a.product-name {
+    color: #368edc;
+    padding: 3px 0px;
+}
+ul.products li .product-info .product-price {
+    color:#111; 
+    padding: 2px 0px;
+    font-weight: 600;
+}
+ul.products li button{
+    width: 100px;
+    height: 30px;
+    border: solid 1px ;
+    font-size: 15px;
+}
+
+
+
+
+/* phần liên hệ */
+.lienhe {
+    padding-top: 80px;
+    position:relative;
+}
+.lienhe-bg{
+    position:absolute;
+    Width: 100%;
+    height: 100%;
+    top: 0%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-image: url(../img/p1.jpg);
+    z-index: -2;
+}
+.lienhe::before {
+    position: absolute;
+    content:"";
+    width: 100%;
+    height:100%;
+    background-color: black;
+    opacity: 0.2;
+    z-index: -1;
+    top:-1%;
+}
+.justify-content {
+    display: flex;
+}
+.lienhe-muc {
+    text-align: center;
+    width: calc(100%/3)
+}
+.lienhe-muc i {
+    color:#fff;
+    font-size: 25px;
+    margin-right: 12px;
+    cursor:pointer;
+}
+.lienhe-muc i:hover {
+    color:rgb(255, 161, 20);
+}
+.lienhe h2 {
+    color: white;
+    font-size: 20px;
+}
+.lienhe p {
+    color: white;
+    margin: 12px 0;
+}
+.lienhe-copyright {
+    text-align: center;
+    padding: 10px 50px 12px;
+    color:#fff;
+    border-top: 1px solid rgb(255, 255, 255);
+}
+#wrapper{
+    margin: 0 auto;
+}
+.div__lap{
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.div__khach{
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+}
+.img__khach{
+    width: 650px;
+}
+.div__khach img:hover{
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+.div__content1{
+    margin: 10px;
+    width: 200px;
+}
+.div__trangTri{
+    margin-top: 100px;
+}
+.img__trangTri{
+    width:400px;
+    height: fit-content;
+}
+.div__phongNgu{
+    overflow: hidden;
+    display: flex;
+    margin: 50px;
+}
+.img__phongNgu{
+    width: 500px;
+}
+.div__content2{
+    width: 200px;
+    margin: 50px;
+}
+.img__phongAn{
+    width: 500px;
+    height: fit-content;
+}
+.div__phongAn h2{
+    margin-top: 15px;
+}
+.div__phongNgu img:hover{
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+.div__giaTot{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px ;
+    margin-bottom: 50px;
+    height: 600px;
+    background-image: url(../img/porto.jpg);
+}
+.div__giaTot h1 {
+    color: white;
+}
+.btn__muaNgay {
+    width: 150px;
+    height: 40px;
+    margin-top: 20px;
+    background-color: transparent;
+    color: white;
+    border: 3px solid rgb(255, 141, 35);
+    cursor: pointer;
+    font-size: 17px;
+    
+}
+.div__giaTot button:hover {
+    background-color:  rgb(255, 141, 35);
+    transition: all 0.3s ease;
+}
+
